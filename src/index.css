@@ -1,8 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Kanit', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +13,57 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.content-table {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  background-color: white;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(100%);
+  z-index: 999;
+  overflow: scroll;
+}
+
+.content-table.visible {
+  transform: translateY(0%);
+}
+
+.content-table.slide-up {
+  transition: transform 0.3s ease-in-out;
+}
+
+.container {
+  margin-top: 20px;
+}
+.float-button{
+  z-index: 1000;
+}
+
+.options {
+  padding: 20px;
+  background-color: rgba(191, 191, 191, 0.15);
+  margin-top: 20px;
+}
+
+.option {
+  margin-top: 10px;
+}
+
+.caption {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.option > span {
+  margin-right: 10px;
+}
+
+.option > .dx-widget {
+  display: inline-block;
+  vertical-align: middle;
 }
